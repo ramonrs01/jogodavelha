@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="background">
+
+    <fieldset>
+        <p>Modo de jogo:</p>
+        <input type="radio" id="cpu" name="modo" checked>
+        <label for="cpu">Computador</label>
+        <input type="radio" id="nao" name="modo">
+        <label for="nao">Dois Jogadores</label>
+    </fieldset>
+    <h4 id="vez"></h4>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><img src="transp.png" alt="imagem" id="a1" onclick="checkjogo(this.id)"></td>
+                <td><img src="transp.png" alt="imagem" id="a2" onclick="checkjogo(this.id)"></td>
+                <td><img src="transp.png" alt="imagem" id="a3" onclick="checkjogo(this.id)"></td>
+            </tr>
+            <tr>
+                <td><img src="transp.png" alt="imagem" id="b1" onclick="checkjogo(this.id)"></td>
+                <td><img src="transp.png" alt="imagem" id="b2" onclick="checkjogo(this.id)"></td>
+                <td><img src="transp.png" alt="imagem" id="b3" onclick="checkjogo(this.id)"></td>
+            </tr>
+            <tr>
+                <td><img src="transp.png" alt="imagem" id="c1" onclick="checkjogo(this.id)"></td>
+                <td><img src="transp.png" alt="imagem" id="c2" onclick="checkjogo(this.id)"></td>
+                <td><img src="transp.png" alt="imagem" id="c3" onclick="checkjogo(this.id)"></td>
+            </tr>
+        </tbody>
+    </table>    
+
+    <img src="end.png" id="end" alt="Fim de Jogo" style=" height: 480px; width: 700px;">
+  
+
+
+    <div id="contabilizar">
+        <p>Placar</p>
+        <p>X: <span id="scoreX">0</span></p>
+        <p>O: <span id="scoreO">0</span></p>
+    </div>
+    <h4 id="mensagem"></h4>
+    <button id="nextButton" style="display:none;" onclick="restartGame()">Jogar novamente</button>
+    <a href="index.html"><button>Reiniciar</button></a>
+</body>
+</html>

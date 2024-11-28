@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    flex-direction: column;
+    padding: 10px;
+    background: url(back.jpg) no-repeat;
+}
+
+fieldset {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px; 
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 400px; 
+    margin-bottom: 20px;
+}
+
+td {
+    width: 33.33%; 
+    height: 100px;
+    border: 2px solid #333;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px; 
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para a imagem de fim de jogo */
+#end {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Inicialmente oculta */
+    z-index: 10; /* Garante que a imagem fique acima de outros elementos */
+    max-width: 90%;  /* Ajusta a largura da imagem para 90% da largura da tela */
+    max-height: 80%; /* Ajusta a altura da imagem para 80% da altura da tela */
+    width: auto;  /* Mantém a proporção da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Responsividade para telas menores que 600px */
+@media (max-width: 600px) {
+    table {
+        max-width: 300px; /* Ajusta o tamanho da tabela para telas pequenas */
+    }
+
+    td {
+        width: 33.33%; 
+        height: 80px; /* Ajusta a altura das células */
+    }
+
+    button {
+        max-width: 300px;  /* Ajusta o tamanho do botão em telas pequenas */
+    }
+
+    /* Ajuste do tamanho da fonte para o placar e mensagem */
+    #contabilizar {
+        margin-top: 10px;
+    }
+
+    h4, p {
+        font-size: 1em;  /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+}
